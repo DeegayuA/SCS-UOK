@@ -51,7 +51,8 @@ ul {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none !important;
+    color: var(--header-color);
 }
 
 img {
@@ -828,7 +829,7 @@ img {
 
 .footer__addr {
     margin-right: var(--spacing-m);
-    margin-bottom: var(--spacing-xl);
+    margin-bottom: var(--spacing-l);
 }
 
 .footer__logo {
@@ -888,7 +889,8 @@ img {
 
 .footer__nav>* {
     flex: 1 50%;
-    margin-right: 1.25em;
+    margin-right: var(--spacing-m);
+    margin-bottom: var(--spacing-l);
 }
 
 .nav__ul a {
