@@ -196,6 +196,7 @@ img {
 .home__img {
     justify-self: center;
     width: 200%;
+    height: auto;
 }
 
 .home__shadow {
