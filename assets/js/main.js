@@ -41,12 +41,17 @@ function linkAction(){
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
-/*=============== SCROLL REVEAL ANIMATION ===============*/
-const sr = ScrollReveal({
-    distance: '90px',
-    duration: 3000,
-})
 
-sr.reveal(`.home__data`, {origin: 'top', delay: 400})
-sr.reveal(`.home__img`, {origin: 'bottom', delay: 600})
-sr.reveal(`.home__footer`, {origin: 'bottom', delay: 800})
+/*===== CHANGE BACKGROUND HEADER =====*/
+function scrollHeader() {
+  const header = document.getElementById('header')
+  if (this.scrollY >= 100) header.classList.add('scroll-header'); else header.classList.remove('scroll-header'); S
+}
+window.addEventListener('scroll', scrollHeader)
+
+/*===== SHOW SCROLL TOP =====*/
+function scrollTop() {
+  const scrollTop = document.getElementById('scroll-top')
+  if (this.scrollY >= 500) scrollTop.classList.add('show-scroll'); else scrollTop.classList.remove('show-scroll');
+}
+window.addEventListener('scroll', scrollTop)

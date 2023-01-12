@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Deeghayu Adhikari">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
@@ -28,11 +29,14 @@
     <div class="loader__wrapper" id="loader">
         <div class="loader" ></div>
     </div>
-    
+    <!--===== SCROLL TOP =====-->
+    <a href="#" class="scrolltop" id="scroll-top">
+        <i class='bx bxs-chevrons-up scrolltop__icon'></i>
+    </a>
  
 
     <!--==================== HEADER ====================-->
-    <header class="header">
+    <header class="header" id="header">
         <nav class="nav container">
             <a href="#" class="nav__logo">
                 <div>
@@ -96,9 +100,9 @@
             </div>
     
             <footer class="home__footer">
-                <span>(+94) 112-000-000</span>
+                <span><a href="tel:(+94)112-000-000">(+94) 112-000-000</a></span>
                 <span>|</span>
-                <span>info@scs.uok.com (not actual mail)</span>
+                <span><a href="info@scs.uok.com ">info@scs.uok.com (not actual mail)</a></span>
             </footer>
         </section>
     </main>
@@ -171,37 +175,162 @@
     
     <div class="card-grid2">
         <a class="card3" href="#">
-            <div class="card__content">
+            <div class="card__content2">
                 <h3 class="card__heading">Advice on study design</h3>
                 <p class="card__category">Experimental design, Questionnaire design, Sampling design, Data Management, Data wrangling</p>
             </div>
         </a>
         <a class="card3" href="#">
-            <div class="card__content">
+            <div class="card__content2">
                 <h3 class="card__heading">Data Analysis and Interpretation of results</h3>
                 <p class="card__category">Data Visualization, Choice and application of statistical methods, Advanced statistical analysis and interpretation, Statistical modelling. Feedback and advice on statistical methods.</p>
             </div>
         </a>
         <a class="card3" href="#">
-            <div class="card__content">
+            <div class="card__content2">
                 <h3 class="card__heading">Assistance with statistical software and programming</h3>
                 <p class="card__category">Mainly open source software (R and Python) and R Commander graphical user interfaces (alternative to SPSS and Minitab).</p>
             </div>
-            </li>
-        
-            <div>
+        </a>
+        </div>
 </section>
+<!--==================== contact ====================-->
+<h1 class="service__title">Get in touch</h1>
+<section class="get-in-touch">
+    
+    <form class="contact-form row">
+        <div class="form-field col x-50">
+            <input id="name" class="input-text js-input" type="text" required>
+            <label class="label" for="name">Name</label>
+        </div>
+        <div class="form-field col x-50">
+            <input id="email" class="input-text js-input" type="email" required>
+            <label class="label" for="email">E-mail</label>
+        </div>
+        <div class="form-field col x-100">
+            <input id="message" class="input-text js-input" type="text" required>
+            <label class="label" for="message">Message</label>
+        </div>
+        <div class="form-field col x-100 align-center">
+            <input class="submit-btn" type="submit" value="Submit">
+        </div>
+    </form>
+</section>
+
+<!--==================== footer ====================-->
+<footer class="footer">
+    <div class="footer__addr">
+        <h1 class="footer__logo">SCS UOK</h1>
+
+        <h2>Contact</h2>
+
+        <address>
+            Department of Statistics and Computer Science, <br>Faculty of Science, <br>University of Kelaniya.<br>
+
+          
+        </address>
+        <span><a href="tel:(+94)112-000-000">(+94) 112-000-000</a></span>
+        <br>
+        <span><a href="info@scs.uok.com ">info@scs.uok.com (not actual mail)</a></span>
+        <a class="footer__btn" href="info@scs.uok.com ">Email Us</a>
+    </div>
+    <ul class="footer__nav">
+        <li class="nav__item">
+            <h2 class="nav__title">Coordinator</h2>
+
+            <ul class="nav__ul">
+                <li>
+                    <a href="#">Dr -----------------</a>
+                </li>
+                <li>
+                    DSCS,
+                </li>
+                <li>
+                    FOS,
+                </li>
+                <li>
+                    UOK.
+                </li>
+
+            </ul>
+        </li>
+
+        <li class="nav__item nav__item--extra">
+            <h2 class="nav__title">Navigation</h2>
+
+            <ul class="nav__ul nav__ul--extra">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+
+                <li>
+                    <a href="#">About</a>
+                </li>
+
+                <li>
+                    <a href="#">Blog</a>
+                </li>
+
+                <li>
+                    <a href="#">Portfolio</a>
+                </li>
+
+                <li>
+                    <a href="#">Contacts</a>
+                </li>
+
+            </ul>
+        </li>
+
+        <li class="nav__item">
+            <h2 class="nav__title">Legal</h2>
+
+            <ul class="nav__ul">
+                <li>
+                    <a href="#">Privacy Policy</a>
+                </li>
+
+                <li>
+                    <a href="#">Terms of Use</a>
+                </li>
+
+                <li>
+                    <a href="#">Sitemap</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="legal">
+        <p>&copy; 2023 Something. All rights reserved.</p>
+
+        <div class="legal__links">
+            <span>Made with <span class="heart">♥</span> by <a href="https://deeghayu.netlify.app/" class="author">Deeghayu Adhikari</a></span>
+        </div>
+    </div>
+</footer>
 
 
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/scrollreveal.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+    
     <script>
         $(document).ready(function () {
             setTimeout(function () {
                 $(".loader-wrapper").fadeOut('slow');
-            }, 1000);
+            }, 500);
         });
+
+        $('.js-input').keyup(function () {
+                if ($(this).val()) {
+                    $(this).addClass('not-empty');
+                } else {
+                    $(this).removeClass('not-empty');
+                }
+            });
     </script>
+    <!--===== detect_browser =====-->
+    <script src="assets/js/detect_browser.js"></script>
 </body>
 </html>
