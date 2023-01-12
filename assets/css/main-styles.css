@@ -492,8 +492,9 @@ img {
     color: var(--text-color);
     font-size: calc(var(--normal-font-size) * 2);
     text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
-    line-height: 1.4;
+    line-height: 1.1;
     font-weight: 800;
+    margin-bottom: var(--spacing-s);
 }
 /*=============== software ===============*/
 .software-section {
@@ -513,7 +514,7 @@ img {
 
 }
 .card3:before {
-    padding-bottom: 45vh;
+    padding-bottom: 40vh;
     content: '';
     display: block;
     width: max-content;
