@@ -84,19 +84,28 @@ img {
     justify-content: space-between;
     align-items: center;
 }
-
+.nav__logo img {
+    position: relative;
+    top: 3px;
+    height: 2rem;
+}
 .nav__logo,
 .nav__toggle {
+    text-align: center;
+    font-weight: 800;
+    font-size: 2rem;
     color: var(--header-color);
     display: inline-flex;
 }
 
 .nav__logo {
-    font-weight: 700;
+        display: flex;
+            align-items: center;
+    position: relative;
 }
 
 .nav__toggle {
-    font-size: 1.25rem;
+    font-size: 2rem;
     cursor: pointer;
 }
 
@@ -145,7 +154,7 @@ img {
 /*=============== HOME ===============*/
 .home {
     background-color: var(--bg-color);
-    padding: 9rem 0 2rem;
+    padding: 4rem 0 2rem;
     height: 100vh;
     display: grid;
 }
@@ -184,13 +193,9 @@ img {
     box-shadow: 0 4px 12px hsla(38, 69%, 8%, .2);
 }
 
-.home__img img {
-    width: 230px;
-    animation: floaty 1.8s infinite alternate;
-}
-
 .home__img {
     justify-self: center;
+    width: 400%;
 }
 
 .home__shadow {
@@ -267,8 +272,8 @@ img {
         text-align: initial;
     }
 
-    .home__img img {
-        width: 400px;
+    .home__img {
+        height: 200%;
     }
 
     .home__shadow {
