@@ -10,6 +10,8 @@
     --header-color: #ffffff;
     --text-color: #eaeaea;
     --bg-color: #272727;
+    --bg-color2: rgba(255, 255, 255, 0.5);
+    --bg-color3: rgba(255, 255, 255, 0.2);
     --first-color: #00277a;
 
     /*========== Font and typography ==========*/
@@ -37,6 +39,7 @@
 }
 
 body {
+    background-color: var(--bg-color) !important;
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
     font-weight: 500;
@@ -185,6 +188,8 @@ img {
     transition: .4s;
 }
 .home__button:hover {
+    z-index: 999;
+    cursor: pointer;
     background-color: var(--text-color) ;
     color: var(--first-color);
 }
@@ -236,6 +241,267 @@ img {
         transform: scale(.85, .85);
     }
 }
+/*=============== About Section ===============*/
+#about {
+    margin-top: 30rem;
+    min-height: 50vh;
+}
+.card2 {
+    
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card2 span {
+    
+    position: absolute;
+    top: 0;
+    width: 300px;
+    height: 300px;
+    display: block;
+    background: var(--header-color);
+    border-radius: 50%;
+    transform-origin: 100px 0;
+    transform: rotate(calc(90deg * var(--i)));
+    filter: blur(80px);
+    opacity: 0.8;
+
+}
+
+.card2 span:nth-child(1) {
+    background: #01b2fe;
+}
+
+.card2 span:nth-child(2) {
+    background: #ff008c;
+}
+
+.card2 span:nth-child(3) {
+    background: #ffcd00;
+}
+
+.card2 span:nth-child(4) {
+    background: #00c456;
+}
+
+.card2 .glass {
+    position: absolute;
+    width: 90vw;
+    height: max-content;
+    background: var(--bg-color2);
+    border-radius: 20px;
+    border: 1px solid var(--bg-color);
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.card2 .glass::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color3);
+    pointer-events: none;
+    transform: skewX(345deg);
+}
+
+.card2 .glass h2 {
+    text-align: justify;
+    padding: 2rem;
+    font-weight: 700;
+    width: 100%;
+    background: var(--bg-color3);
+    color: var(--header-color);
+}
+
+.card2 .glass h2 i {
+    font-weight: 400;
+    font-size: 0.75em;
+    font-style: normal;
+}
+
+/*=============== About Button ===============*/
+.about__button {
+    color: var(--header-color);
+    background-color: var(--bg-color);
+    width: 100%;
+    height: 50px;
+    border: 0;
+    font-size: var(--normal-font-size);
+    border-radius: 0;
+    transition: 0.6s;
+    overflow: hidden;
+}
+
+.about__button:focus {
+    outline: 0;
+}
+
+.about__button:before {
+    content: "";
+    display: block;
+    position: absolute;
+    background: var(--bg-color2);
+    width: 60px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0.5;
+    filter: blur(30px);
+    transform: translateX(-100px) skewX(-15deg);
+}
+
+.about__button:after {
+    content: "";
+    display: block;
+    position: absolute;
+    background: var(--bg-color3);
+    width: 30px;
+    height: 100%;
+    left: 30px;
+    top: 0;
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100px) skewX(-15deg);
+}
+
+.about__button:hover {
+    background: var(--header-color);
+    color: var(--bg-color);
+    cursor: pointer;
+}
+
+.about__button:hover:before {
+    transform: translateX(100vw) skewX(-15deg);
+    opacity: 0.6;
+    transition: 2s;
+}
+
+.about__button:hover:after {
+    transform: translateX(100vw) skewX(-15deg);
+    opacity: 1;
+    transition: 2s;
+}
+
+
+/*=============== Services ===============*/
+:root {
+    --spacing-s: 8px;
+    --spacing-m: 16px;
+    --spacing-l: 24px;
+    --spacing-xl: 32px;
+    --spacing-xxl: 64px;
+    --width-container: 1200px;
+}
+
+.service__title{
+    text-align: center;
+    padding-top: 2rem;
+}
+.service-section {
+    align-items: flex-start;
+    display: flex;
+    min-height: 100%;
+    justify-content: center;
+    padding: var(--spacing-xxl) var(--spacing-l);
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: var(--spacing-l);
+    grid-row-gap: var(--spacing-l);
+    max-width: var(--width-container);
+    width: 100%;
+}
+
+@media(min-width: 540px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(min-width: 960px) {
+    .card-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.card {
+    list-style: none;
+    position: relative;
+}
+
+.card:before {
+    content: '';
+    display: block;
+    padding-bottom: 150%;
+    width: 100%;
+}
+
+.card__background {
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--spacing-l);
+    bottom: 0;
+    background-color: var(--bg-color);
+        filter: brightness(1) saturate(1.2) contrast(0.85);
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform-origin: center;
+    transform: scale(1) translateZ(0);
+    transition:
+        filter 200ms linear,
+        transform 200ms linear;
+}
+
+.card:hover .card__background {
+    transform: scale(1.05) translateZ(0);
+}
+
+.card-grid:hover>.card:not(:hover) .card__background {
+    filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+}
+
+.card__content {
+    left: 0;
+    padding: var(--spacing-l);
+    position: absolute;
+    top: 0;
+}
+
+.card__category {
+    color: var(--header-color);
+    font-size: 0.9rem;
+    margin-bottom: var(--spacing-s);
+    text-transform: uppercase;
+}
+
+.card__heading {
+    color: var(--text-color);
+    font-size: 1.9rem;
+    text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+    line-height: 1.4;
+    word-spacing: 100vw;
+}
+/*=============== software ===============*/
+.software-section {
+    align-items: flex-start;
+    display: flex;
+    min-height: 100%;
+    justify-content: center;
+    padding: var(--spacing-xxl) var(--spacing-l);
+}
+
+
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 @media screen and (max-width: 320px) {
@@ -259,6 +525,12 @@ img {
         flex-direction: row;
         column-gap: 3.5rem;
     }
+    .card2 .glass {
+    width: 40vw;
+}
+.card2 .glass h2 {
+    padding: 4rem 6rem;
+}
 }
 
 /* For large devices */
