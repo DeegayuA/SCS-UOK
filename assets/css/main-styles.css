@@ -40,7 +40,7 @@
 
 body {
     background-color: var(--bg-color) !important;
-    font-family: var(--body-font);
+    font-family: var(--body-font)  !important;
     font-size: var(--normal-font-size);
     font-weight: 500;
     color: var(--text-color);
@@ -82,6 +82,7 @@ img {
 }
 
 .nav {
+    z-index: 99;
     height: var(--header-height);
     display: flex;
     justify-content: space-between;
@@ -255,11 +256,11 @@ img {
 }
 
 .card2 span {
-    
+    overflow-x: hidden;
     position: absolute;
     top: 0;
-    width: 300px;
-    height: 300px;
+    width: 20vw;
+    height: 20vw;
     display: block;
     background: var(--header-color);
     border-radius: 50%;
@@ -291,8 +292,8 @@ img {
     width: 90vw;
     height: max-content;
     background: var(--bg-color2);
-    border-radius: 20px;
-    border: 1px solid var(--bg-color);
+    border-radius: var(--spacing-xl);
+    border: 1px solid var(--header-color);
     overflow: hidden;
     display: flex;
     justify-content: flex-start;
@@ -407,7 +408,6 @@ img {
 .service-section {
     align-items: flex-start;
     display: flex;
-    min-height: 100%;
     justify-content: center;
     padding: var(--spacing-xxl) var(--spacing-l);
 }
@@ -434,6 +434,7 @@ img {
 }
 
 .card {
+
     list-style: none;
     position: relative;
 }
@@ -473,34 +474,71 @@ img {
 
 .card__content {
     left: 0;
-    padding: var(--spacing-l);
+    padding: var(--spacing-xl);
     position: absolute;
     top: 0;
 }
 
 .card__category {
+    text-align: justify;
     color: var(--header-color);
-    font-size: 0.9rem;
+    font-size: var(--normal-font-size);
     margin-bottom: var(--spacing-s);
     text-transform: uppercase;
+    font-weight: 300;
 }
 
 .card__heading {
     color: var(--text-color);
-    font-size: 1.9rem;
+    font-size: calc(var(--normal-font-size) * 2);
     text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
     line-height: 1.4;
-    word-spacing: 100vw;
+    font-weight: 800;
 }
 /*=============== software ===============*/
 .software-section {
     align-items: flex-start;
     display: flex;
-    min-height: 100%;
     justify-content: center;
     padding: var(--spacing-xxl) var(--spacing-l);
 }
+.card3{
+    border-radius: var(--spacing-l);
+    height: max-content;
+    width: 26vw;
+    list-style: none;
+    position: relative;
+    background-color: var(--bg-color);
+        filter: brightness(1) saturate(1.2) contrast(0.85);
 
+}
+.card3:before {
+    padding-bottom: 45vh;
+    content: '';
+    display: block;
+    width: max-content;
+    height: max-content;
+}
+.card-grid2 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: var(--spacing-l);
+    grid-row-gap: var(--spacing-l);
+    max-width: var(--width-container);
+    width: 100%;
+}
+
+@media(min-width: 540px) {
+    .card-grid2 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media(min-width: 960px) {
+    .card-grid2 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
@@ -531,6 +569,8 @@ img {
 .card2 .glass h2 {
     padding: 4rem 6rem;
 }
+
+
 }
 
 /* For large devices */
