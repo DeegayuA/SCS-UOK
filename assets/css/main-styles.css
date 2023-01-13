@@ -257,13 +257,13 @@ img {
 .home__img {
     justify-self: center;
     width: 300%;
-    height: auto;
+    height: 100%;
 }
 
 .home__shadow {
     width: 130px;
     height: 15px;
-    background-color: rgba(40, 34, 24, 0.16);
+    background-color: rgba(40, 34, 24, 0.467);
     margin: 0 auto;
     border-radius: 50%;
     filter: blur(7px);
