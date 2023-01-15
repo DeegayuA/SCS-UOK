@@ -20,7 +20,24 @@
     
     
 
-
+    <!--===== js =====-->
     <script src="./assets/js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+            setTimeout(function () {
+                $(".loader-wrapper").fadeOut('slow');
+            }, 500);
+        });
+
+        $('.js-input').keyup(function () {
+            if ($(this).val()) {
+                $(this).addClass('not-empty');
+            } else {
+                $(this).removeClass('not-empty');
+            }
+        });
+    </script>
+    <!--===== detect_browser =====-->
+    <script src="assets/js/detect_browser.js"></script>
 </body>
 </html>
