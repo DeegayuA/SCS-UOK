@@ -639,10 +639,11 @@ img {
 
 .get-in-touch {
     max-width: 650px;
-    margin: 0 auto;
+    margin: 2rem  auto;
     position: relative;
-    top: 25%;
-    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .contact-form .form-field {
