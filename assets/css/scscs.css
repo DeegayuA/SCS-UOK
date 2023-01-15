@@ -37,10 +37,11 @@
     padding: 0;
     margin: 0;
 }
-#show-all {
+/* ----- of i fixed the loader, the 3d object will not show
+#main {
     display: none;
 }
-
+*/
 body {
     background-color: var(--bg-color) !important;
     font-family: var(--body-font)  !important;
