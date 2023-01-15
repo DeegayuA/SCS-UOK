@@ -2,12 +2,12 @@
 var myVar;
 
 function myFunction() {
-  myVar = setTimeout(showPage, 3000);
+  myVar = setTimeout(showPage, 1000);
 }
 
 function showPage() {
   document.getElementById("loader").style.display = "none";
-  // document.getElementById("myDiv").style.display = "block";
+  document.getElementById("main").style.display = "block";
 }
 
 /*=============== SHOW MENU ===============*/

@@ -38,6 +38,10 @@
     margin: 0;
 }
 
+main{
+    display: none;
+}
+
 body {
     background-color: var(--bg-color) !important;
     font-family: var(--body-font) !important;
