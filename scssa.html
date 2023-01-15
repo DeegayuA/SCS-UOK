@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/scssa.css">
+    <link rel="stylesheet" href="./assets/css/loader.css">
+    <link rel="stylesheet" href="assets/css/light-styles.css"
+        media="(prefers-color-scheme:light), (prefers-color-scheme:no-preference)">
+    <link rel="stylesheet" href="assets/css/dark-styles.css" media="(prefers-color-scheme:dark)">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+    </style>
+    <link rel="icon" type="image/x-icon" href="./assets/img/logo.ico">
+    <title>DSCS-UOK</title>
+</head>
+
+<body onload="myFunction()">
+    <!--LOADER-->
+    <div class="loader__wrapper" id="loader">
+        <div class="loader"></div>
+    </div>
+    <!--===== SCROLL TOP =====-->
+    <a href="#" class="scrolltop" id="scroll-top">
+        <i class='bx bxs-chevrons-up scrolltop__icon'></i>
+    </a>
+    <!--===== pages =====-->
+    <h1 class="main__heading">Welcome to SCSSA</h1>
+    
+
+
+
+
+
+
+
+
+
+
+    <!--===== js =====-->
+    <script src="./assets/js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+    <script>
+        $(document).ready(function () {
+            setTimeout(function () {
+                $(".loader-wrapper").fadeOut('slow');
+            }, 500);
+        });
+    </script>
+    <!--===== detect_browser =====-->
+    <script src="assets/js/detect_browser.js"></script>
+</body>
+
+</html>
