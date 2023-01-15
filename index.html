@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/loader.css">
     <link rel="stylesheet" href="assets/css/light-styles.css"
         media="(prefers-color-scheme:light), (prefers-color-scheme:no-preference)">
     <link rel="stylesheet" href="assets/css/dark-styles.css" media="(prefers-color-scheme:dark)">
@@ -47,19 +48,12 @@
 
     <!--===== js =====-->
     <script src="./assets/js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
     <script>
         $(document).ready(function () {
             setTimeout(function () {
                 $(".loader-wrapper").fadeOut('slow');
             }, 500);
-        });
-
-        $('.js-input').keyup(function () {
-            if ($(this).val()) {
-                $(this).addClass('not-empty');
-            } else {
-                $(this).removeClass('not-empty');
-            }
         });
     </script>
     <!--===== detect_browser =====-->
