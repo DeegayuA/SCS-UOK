@@ -1,16 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
+:root {
+    --bg-color: #000;
+    --main-color: #ffffff;
+    --text-color: #d6d6d6;
+    --highlight-color: #00b3ff;
+
+}
+
 body {
     font-family: 'Quicksand', sans-serif;
-    background-color: var(--bg-scssa-color);
+    background-color: var(--bg-color);
     margin: 0rem;
     overflow-x: hidden;
 }
 
 
 .home {
-    text-align: center;
-    z-index: 1;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -20,7 +26,7 @@ body {
 
 .glitch {
     margin: 0;
-    color: var(--main-scssa-color);
+    color: var(--main-color);
     border-radius: 0.75rem;
     transition: 0.2s ease;
 }
@@ -45,15 +51,15 @@ body {
 
 .glitch:hover,
 .glitch2:hover {
-    background-color: var(--main-scssa-color);
-    color: var(--bg-scssa-color);
+    background-color: white;
+    color: black;
 }
 
 #blur {
     top: 0;
-    height: 100vh;
+    height: max-content;
     width: 100vw;
-    position: fixed;
+    position: absolute;
     z-index: -1;
     backdrop-filter: blur(200px);
 }
@@ -62,7 +68,7 @@ body {
     z-index: -2;
     top: 0;
     position: absolute;
-    background-color: var(--main-scssa-color);
+    background-color: white;
     height: 500px;
     aspect-ratio: 1;
     left: 50%;
@@ -71,8 +77,8 @@ body {
     border-radius: 50%;
     animation: rotate 20s infinite;
     background: linear-gradient(to right,
-            var(--bg1-scssa-color),
-            var(--bg2-scssa-color));
+            aquamarine,
+            mediumpurple);
 }
 
 @keyframes rotate {
@@ -90,21 +96,6 @@ body {
 }
 
 /* NAV */
-.nav{
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: space-between;
-}
-.logos{
-    position: relative;
-    top: 50px;
-    right: 50px;
-}
-.nav-image{
-    height: 50px;
-    width: auto;
-}
 #menuToggle {
     display: block;
     position: relative;
@@ -114,14 +105,15 @@ body {
     -webkit-user-select: none;
     user-select: none;
 }
+
 #menuToggle a {
     text-decoration: none;
-    color: var(--bg-scssa-color);
+    color: #232323;
     transition: color 0.3s ease;
 }
 
 #menuToggle a:hover {
-    color: var(--highlight-scssa-color);
+    color: tomato;
 }
 
 
@@ -146,14 +138,13 @@ body {
  */
 #menuToggle span {
     display: block;
-    width: 2rem;
-    height: 0.25rem;
-    margin-bottom: 0.3rem;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
     position: relative;
 
-    background: var(--text-scssa-color);
-    border-radius: 0.25rem;
-    transition: 0.2s ease-in-out;
+    background: #cdcdcd;
+    border-radius: 3px;
 
     z-index: 1;
 
@@ -162,10 +153,6 @@ body {
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
         background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
         opacity 0.55s ease;
-}
-nav:hover #menuToggle span {
-    background-color: var(--main-scssa-color);
-    filter:brightness(200%);
 }
 
 #menuToggle span:first-child {
@@ -180,7 +167,7 @@ nav:hover #menuToggle span {
 #menuToggle input:checked~span {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
-    background: var(--bg-scssa-color);
+    background: #232323;
 }
 
 #menuToggle input:checked~span:nth-last-child(3) {
@@ -200,7 +187,7 @@ nav:hover #menuToggle span {
     padding: 50px;
     padding-top: 125px;
 
-    background: var(--text-scssa-color);
+    background: #ededed;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
     /* to stop flickering of text in safari */
@@ -218,6 +205,7 @@ nav:hover #menuToggle span {
 
 #menuToggle input:checked~ul {
     transform: none;
+<<<<<<< HEAD
 }
 
 /* Media query for home*/
@@ -232,3 +220,6 @@ nav:hover #menuToggle span {
             padding: 1rem 2rem;
         }
 }
+=======
+}
+>>>>>>> parent of faa334d (fix)
