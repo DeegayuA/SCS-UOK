@@ -526,7 +526,8 @@ body {
 
 @media(min-width: 1024px) {
     .card3 {
-        width: 20vw;
+        min-width: 20vw;
+        max-width: 26vw;
     }
     .card-grid2 {
         grid-template-columns: repeat(3, 1fr);
