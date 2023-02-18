@@ -1,22 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
-:root {
-    --bg-color: #000;
-    --main-color: #ffffff;
-    --text-color: #d6d6d6;
-    --highlight-color: #00b3ff;
-
-}
-
 body {
     font-family: 'Quicksand', sans-serif;
-    background-color: var(--bg-color);
+    background-color: var(--bg-scssa-color);
     margin: 0rem;
     overflow-x: hidden;
 }
 
 
 .home {
+    text-align: center;
+    z-index: 1;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -26,7 +20,7 @@ body {
 
 .glitch {
     margin: 0;
-    color: var(--main-color);
+    color: var(--main-scssa-color);
     border-radius: 0.75rem;
     transition: 0.2s ease;
 }
@@ -51,25 +45,24 @@ body {
 
 .glitch:hover,
 .glitch2:hover {
-    background-color: white;
-    color: black;
+    background-color: var(--main-scssa-color);
+    color: var(--bg-scssa-color);
 }
 
 #blur {
     top: 0;
-    height: max-content;
+    height: 100vh;
     width: 100vw;
-    position: absolute;
+    position: fixed;
     z-index: -1;
     backdrop-filter: blur(200px);
-    -webkit-backdrop-filter: blur(200px);
 }
 
 #blob {
     z-index: -2;
     top: 0;
     position: absolute;
-    background-color: white;
+    background-color: var(--main-scssa-color);
     height: 500px;
     aspect-ratio: 1;
     left: 50%;
@@ -78,8 +71,8 @@ body {
     border-radius: 50%;
     animation: rotate 20s infinite;
     background: linear-gradient(to right,
-            aquamarine,
-            mediumpurple);
+            var(--bg1-scssa-color),
+            var(--bg2-scssa-color));
 }
 
 @keyframes rotate {
@@ -97,6 +90,24 @@ body {
 }
 
 /* NAV */
+.nav {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logos {
+    position: relative;
+    top: 50px;
+    right: 50px;
+}
+
+.nav-image {
+    height: 50px;
+    width: auto;
+}
+
 #menuToggle {
     display: block;
     position: relative;
@@ -109,12 +120,12 @@ body {
 
 #menuToggle a {
     text-decoration: none;
-    color: #232323;
+    color: var(--bg-scssa-color);
     transition: color 0.3s ease;
 }
 
 #menuToggle a:hover {
-    color: tomato;
+    color: var(--highlight-scssa-color);
 }
 
 
@@ -139,13 +150,14 @@ body {
  */
 #menuToggle span {
     display: block;
-    width: 33px;
-    height: 4px;
-    margin-bottom: 5px;
+    width: 2rem;
+    height: 0.25rem;
+    margin-bottom: 0.3rem;
     position: relative;
 
-    background: #cdcdcd;
-    border-radius: 3px;
+    background: var(--text-scssa-color);
+    border-radius: 0.25rem;
+    transition: 0.2s ease-in-out;
 
     z-index: 1;
 
@@ -154,6 +166,11 @@ body {
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
         background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
         opacity 0.55s ease;
+}
+
+nav:hover #menuToggle span {
+    background-color: var(--main-scssa-color);
+    filter: brightness(200%);
 }
 
 #menuToggle span:first-child {
@@ -168,7 +185,7 @@ body {
 #menuToggle input:checked~span {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
-    background: #232323;
+    background: var(--bg-scssa-color);
 }
 
 #menuToggle input:checked~span:nth-last-child(3) {
@@ -188,7 +205,7 @@ body {
     padding: 50px;
     padding-top: 125px;
 
-    background: #ededed;
+    background: var(--text-scssa-color);
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
     /* to stop flickering of text in safari */
@@ -206,21 +223,20 @@ body {
 
 #menuToggle input:checked~ul {
     transform: none;
-<<<<<<< HEAD
 }
 
 /* Media query for home*/
 @media only screen and (max-width: 900px) {
     .big {
-            font-size: 5rem;
-            padding: 1rem 2rem;
-        }
-    
-        .small {
-            font-size: 1rem;
-            padding: 1rem 2rem;
-        }
+        font-size: 5rem;
+        padding: 1rem 2rem;
+    }
+
+    .small {
+        font-size: 1rem;
+        padding: 1rem 2rem;
+    }
 }
-=======
+.footer{
+        background-color: var(--highlight-scssa-color) !important;
 }
->>>>>>> parent of faa334d (fix)
