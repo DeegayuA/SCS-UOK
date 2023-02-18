@@ -1,21 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
-:root {
-    --bg-color: #000;
-    --main-color: #ffffff;
-    --text-color: #d6d6d6;
-    --highlight-color: #00b3ff;
-
-}
-
 body {
     font-family: 'Quicksand', sans-serif;
-    background-color: var(--bg-color);
+    background-color: var(--bg-scssa-color);
     margin: 0rem;
     overflow-x: hidden;
 }
 
 .home {
+    text-align: center;
+    z-index: 1;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -25,7 +19,7 @@ body {
 
 .glitch {
     margin: 0;
-    color: var(--main-color);
+    color: var(--main-scssa-color);
     border-radius: 0.75rem;
     transition: 0.2s ease;
 }
@@ -50,15 +44,15 @@ body {
 
 .glitch:hover,
 .glitch2:hover {
-    background-color: white;
-    color: black;
+    background-color: var(--main-scssa-color);
+    color: var(--bg-scssa-color);
 }
 
 #blur {
     top: 0;
-    height: max-content;
+    height: 100vh;
     width: 100vw;
-    position: absolute;
+    position: fixed;
     z-index: -1;
     backdrop-filter: blur(200px);
 }
@@ -67,7 +61,7 @@ body {
     z-index: -2;
     top: 0;
     position: absolute;
-    background-color: white;
+    background-color: var(--main-scssa-color);
     height: 500px;
     aspect-ratio: 1;
     left: 50%;
@@ -76,8 +70,8 @@ body {
     border-radius: 50%;
     animation: rotate 20s infinite;
     background: linear-gradient(to right,
-            aquamarine,
-            mediumpurple);
+            var(--bg1-scssa-color),
+            var(--bg2-scssa-color));
 }
 
 @keyframes rotate {
@@ -95,6 +89,21 @@ body {
 }
 
 /* NAV */
+.nav{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+}
+.logos{
+    position: relative;
+    top: 50px;
+    right: 50px;
+}
+.nav-image{
+    height: 50px;
+    width: auto;
+}
 #menuToggle {
     display: block;
     position: relative;
@@ -104,15 +113,14 @@ body {
     -webkit-user-select: none;
     user-select: none;
 }
-
 #menuToggle a {
     text-decoration: none;
-    color: #232323;
+    color: var(--bg-scssa-color);
     transition: color 0.3s ease;
 }
 
 #menuToggle a:hover {
-    color: tomato;
+    color: var(--highlight-scssa-color);
 }
 
 
@@ -137,13 +145,14 @@ body {
  */
 #menuToggle span {
     display: block;
-    width: 33px;
-    height: 4px;
-    margin-bottom: 5px;
+    width: 2rem;
+    height: 0.25rem;
+    margin-bottom: 0.3rem;
     position: relative;
 
-    background: #cdcdcd;
-    border-radius: 3px;
+    background: var(--text-scssa-color);
+    border-radius: 0.25rem;
+    transition: 0.2s ease-in-out;
 
     z-index: 1;
 
@@ -152,6 +161,10 @@ body {
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
         background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
         opacity 0.55s ease;
+}
+nav:hover #menuToggle span {
+    background-color: var(--main-scssa-color);
+    filter:brightness(200%);
 }
 
 #menuToggle span:first-child {
@@ -166,7 +179,7 @@ body {
 #menuToggle input:checked~span {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
-    background: #232323;
+    background: var(--bg-scssa-color);
 }
 
 #menuToggle input:checked~span:nth-last-child(3) {
@@ -186,7 +199,7 @@ body {
     padding: 50px;
     padding-top: 125px;
 
-    background: #ededed;
+    background: var(--text-scssa-color);
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
     /* to stop flickering of text in safari */
@@ -204,4 +217,146 @@ body {
 
 #menuToggle input:checked~ul {
     transform: none;
+}
+
+/* Media query for home*/
+@media only screen and (max-width: 900px) {
+    .big {
+            font-size: 5rem;
+            padding: 1rem 2rem;
+        }
+    
+        .small {
+            font-size: 1rem;
+            padding: 1rem 2rem;
+        }
+}
+
+/* footer */
+.footer {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 5rem;
+    padding: var(--spacing-xl) var(--spacing-xl) var(--spacing-m) var(--spacing-xl);
+    color: var(--header-color);
+    background-color: var(--first-color);
+    border-top: 1px solid var(--first-color);
+}
+
+.footer>* {
+    flex: 1 100%;
+}
+
+.footer__addr {
+    margin-right: var(--spacing-m);
+    margin-bottom: var(--spacing-l);
+}
+
+.footer__logo {
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: var(--normal-font-size);
+}
+
+.footer__addr h2 {
+    margin-top: var(--spacing-m);
+    font-size: var(--normal-font-size);
+    font-weight: 800;
+}
+
+.nav__title {
+    font-weight: 800;
+    font-size: var(--normal-font-size);
+}
+
+.footer address {
+    font-style: normal;
+    color: var(--text-color);
+}
+
+.footer__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: var(--spacing-xl);
+    max-width: max-content;
+    background-color: var(--bg-color3);
+    border-radius: var(--spacing-s);
+    color: var(--header-color);
+    line-height: 0;
+    margin: 0.6em 0;
+    font-size: var(--small-font-size);
+    padding: 0 var(--spacing-m);
+}
+
+.footer ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer li {
+    line-height: 2em;
+}
+
+.footer a {
+    text-decoration: none;
+}
+
+.footer__nav {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.footer__nav>* {
+    flex: 1 50%;
+    margin-right: var(--spacing-m);
+    margin-bottom: var(--spacing-l);
+}
+
+.nav__ul a {
+    color: var(--text-color);
+}
+
+.nav__ul--extra {
+    column-count: 2;
+    column-gap: 1.25em;
+}
+
+.legal {
+    display: flex;
+    flex-wrap: wrap;
+    color: var(--text-color);
+}
+
+.legal__links {
+    display: flex;
+    align-items: center;
+}
+
+.heart {
+    color: red;
+}
+
+@media screen and (min-width: 24.375em) {
+    .legal .legal__links {
+        margin-left: auto;
+    }
+}
+
+@media screen and (min-width: 40.375em) {
+    .footer__nav>* {
+        flex: 1;
+    }
+
+    .nav__item--extra {
+        flex-grow: 2;
+    }
+
+    .footer__addr {
+        flex: 1 0px;
+    }
+
+    .footer__nav {
+        flex: 2 0px;
+    }
 }
