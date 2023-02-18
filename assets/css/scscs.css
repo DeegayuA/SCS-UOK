@@ -97,7 +97,7 @@ body {
 }
 
 .scrolltop:hover .scrolltop__icon {
-    color: var(--bg-color);
+    color: var(--header-color);
 }
 
 /* Show scroll top */
@@ -526,7 +526,7 @@ body {
 
 @media(min-width: 1024px) {
     .card3 {
-        width: 26vw;
+        width: 20vw;
     }
     .card-grid2 {
         grid-template-columns: repeat(3, 1fr);
