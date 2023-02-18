@@ -237,6 +237,9 @@ nav:hover #menuToggle span {
         font-size: 1rem;
         padding: 1rem 2rem;
     }
+         #blob {
+             height: 250px;
+         }
 }
 .footer{
         background-color: var(--highlight-scssa-color) !important;
