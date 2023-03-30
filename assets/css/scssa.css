@@ -7,6 +7,24 @@ body {
     overflow-x: hidden;
 }
 
+.back{
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    height: 50px;
+    aspect-ratio: 1;
+    background-image: url(/assets/img/back-white.png);
+    background-size: cover;
+    background-position: center;
+}
+.back p {
+    position: relative;
+    color: var(--text-color);
+    text-transform: uppercase;
+    left: 60px;
+    top: 10px;
+    display: none;
+}
 
 .home {
     text-align: center;
@@ -353,11 +371,15 @@ nav:hover #menuToggle span {
     place-items: center;
     margin: 0rem;
     overflow: hidden;
-    margin: 2rem;
+    margin: 5rem 0;
+    
 }
 .event--wrapper{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
 }
 .event-content :is(h1, h3) {
     text-align: center;
@@ -386,11 +408,12 @@ nav:hover #menuToggle span {
     border: 3px solid var(--text-color);
     aspect-ratio: 10 / 16;
     border-radius: 1rem;
-    background-color: var(--bg1-scssa-color);
+    background-color: var(--bg-scssa-color);
     overflow: hidden;
     position: relative;
     z-index: 10;
     margin: 1rem;
+    cursor: pointer;
 }
 
 .screen:after,
@@ -418,51 +441,26 @@ nav:hover #menuToggle span {
     border-top-right-radius: 1rem;
 }
 
-@keyframes pan-overlay {
-    from {
-        background-position: 0% 0%;
-    }
-
-    to {
-        background-position: 0% -100%;
-    }
-}
-
-.screen-overlay {
-    background: linear-gradient(rgb(var(--primary-rgb) / 0.15),
-            rgb(var(--primary-rgb) / 0.15) 3px,
-            transparent 3px,
-            transparent 9px);
-    background-size: 100% 9px;
-    height: 100%;
-    width: 100%;
-    animation: pan-overlay 22s infinite linear;
-    position: absolute;
-    z-index: 2;
-    left: 0px;
-    top: 0px;
-}
-
 @keyframes pan-image {
     0% {
         background-position: 36% 42%;
-        background-size: 200%;
+        background-size: 300%;
     }
 
     20% {
         background-position: 30% 35%;
-        background-size: 200%;
+        background-size: 350%;
     }
 
     20.0001% {
         /* -- View 2 -- */
         background-position: 60% 85%;
-        background-size: 500%;
+        background-size: 400%;
     }
 
     40% {
         background-position: 49% 81%;
-        background-size: 500%;
+        background-size: 350%;
     }
 
     40.0001% {
@@ -473,18 +471,18 @@ nav:hover #menuToggle span {
 
     60% {
         background-position: 84% 33%;
-        background-size: 300%;
+        background-size: 250%;
     }
 
     60.0001% {
         /* -- View 4 -- */
         background-position: 0% 0%;
-        background-size: 300%;
+        background-size: 400%;
     }
 
     80% {
         background-position: 15% 4%;
-        background-size: 300%;
+        background-size: 350%;
     }
 
     80.0001% {
@@ -498,22 +496,151 @@ nav:hover #menuToggle span {
         background-size: 300%;
     }
 }
+.screen-img{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: 1;
+        left: 0px;
+        top: 0px;
+        background-size: 300%;
+        background-position: 0% 0%;
+        filter: sepia(100%) hue-rotate(160deg);
+        opacity: 0.6;
+}
+@keyframes pan-image-2 {
+    100% {
+        background-position: 36% 42%;
+        background-size: 200%;
+    }
 
-.screen>.screen-image {
-    background-image: url("https://images.unsplash.com/photo-1515266591878-f93e32bc5937?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2574&q=80");
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    z-index: 1;
-    left: 0px;
-    top: 0px;
-    background-size: 300%;
-    background-position: 0% 0%;
-    filter: sepia(100%) hue-rotate(160deg);
-    opacity: 0.6;
-    animation: pan-image 15s linear infinite;
+    30% {
+        background-position: 30% 35%;
+        background-size: 200%;
+    }
+
+    30.0001% {
+        /* -- View 2 -- */
+        background-position: 60% 85%;
+        background-size: 500%;
+    }
+
+    50% {
+        background-position: 49% 81%;
+        background-size: 500%;
+    }
+
+    50.0001% {
+        /* -- View 3 -- */
+        background-position: 80% 42%;
+        background-size: 300%;
+    }
+
+    70% {
+        background-position: 84% 33%;
+        background-size: 300%;
+    }
+
+    70.0001% {
+        /* -- View 4 -- */
+        background-position: 0% 0%;
+        background-size: 300%;
+    }
+
+    90% {
+        background-position: 15% 4%;
+        background-size: 300%;
+    }
+
+    90.0001% {
+        /* -- View 5 -- */
+        background-position: 80% 10%;
+        background-size: 300%;
+    }
+
+    100% {
+        background-position: 72% 14%;
+        background-size: 300%;
+    }
 }
 
+@keyframes pan-image-3 {
+    0% {
+        background-position: 36% 42%;
+        background-size: 200%;
+    }
+
+    20% {
+        background-position: 42% 35%;
+        background-size: 250%;
+    }
+
+    40.0001% {
+        /* -- View 2 -- */
+        background-position: 60% 85%;
+        background-size: 300%;
+    }
+
+    60% {
+        background-position: 71% 81%;
+        background-size: 250%;
+    }
+
+    20.0001% {
+        /* -- View 3 -- */
+        background-position: 80% 42%;
+        background-size: 300%;
+    }
+
+    40% {
+        background-position: 84% 53%;
+        background-size: 350%;
+    }
+
+    60.0001% {
+        /* -- View 4 -- */
+        background-position: 0% 0%;
+        background-size: 250%;
+    }
+
+    80% {
+        background-position: 10% 6%;
+        background-size: 200%;
+    }
+
+    80.0001% {
+        /* -- View 5 -- */
+        background-position: 60% 20%;
+        background-size: 250%;
+    }
+
+    100% {
+        background-position: 72% 14%;
+        background-size: 300%;
+    }
+}
+.image-1 {
+    animation: pan-image 15s linear infinite;
+    background-image: url(/assets/scssa/events/e01/2.jpg);
+}
+.image-2 {
+    filter: sepia(100%) hue-rotate(160deg);
+    animation: pan-image-3 15s linear infinite;
+    background-image: url(/assets/scssa/events/e02/1.jpg);
+}
+.image-3 {
+    animation: pan-image-3 15s linear infinite;
+    background-image: url(/assets/scssa/events/e03/2.jpg);
+}
+.image-4 {
+    animation: pan-image-2 15s linear infinite;
+    background-image: url(/assets/scssa/events/e04/07.jpg);
+}
+
+.event-icon{
+    width: 50px;
+    color: var(--text-scssa-color);
+}
 .screen>.screen-content {
     display: flex;
     flex-direction: column;

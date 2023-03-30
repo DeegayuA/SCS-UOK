@@ -1,223 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Deeghayu Adhikari">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
-    <!--=============== BOXICONS ===============-->
-    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-            
-    <!--=============== CSS ===============-->
-    <link rel="stylesheet" href="/assets/css/scscs.css">
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    <link rel="stylesheet" href="/assets/css/loader.css">
-    <link rel="stylesheet" href="/assets/css/light-styles.css"
+    <link rel="stylesheet" href="./assets/css/scssa.css">
+    <link rel="stylesheet" href="./assets/css/loader.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/light-styles.css"
         media="(prefers-color-scheme:light), (prefers-color-scheme:no-preference)">
-    <link rel="stylesheet" href="/assets/css/dark-styles.css" media="(prefers-color-scheme:dark)">
+    <link rel="stylesheet" href="assets/css/dark-styles.css" media="(prefers-color-scheme:dark)">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
     </style>
-    <link rel="icon" type="image/x-icon" href="/assets/img/logo.ico">
-    <title>SCS-UOK</title>
-   
+    <link rel="icon" type="image/x-icon" href="./assets/img/scssa-logo.ico">
+    <title>SCSSA-UOK</title>
 </head>
+
 <body onload="myFunction()">
     <!--LOADER-->
     <div class="loader__wrapper" id="loader">
-        <div class="loader" ></div>
+        <div class="loader"></div>
     </div>
     <!--===== SCROLL TOP =====-->
     <a href="#" class="scrolltop" id="scroll-top">
         <i class='bx bxs-chevrons-up scrolltop__icon'></i>
     </a>
- 
-<main id="main">
-    <!--==================== HEADER ====================-->
-    <header class="header" id="header">
-        <nav class="nav">
-            <a href="#" class="nav__logo">
-                <div>
-                    <img src="/assets/img/logo.ico" alt="logo ">
-                    <span>SCS UOK</span>
-                </div>
-            </a>
-    
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">Home</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">About</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">Blog</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">Portfolio</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__link">Contact</a>
-                    </li>
-                </ul>
-    
-                <div class="nav__close" id="nav-close">
-                    <i class='bx bx-x'></i>
-                </div>
+    <!--===== Nav =====-->
+    <nav role="navigation" class="nav">
+        <div class="logos">
+            <img src="./assets/img/scssa-logo.png" alt="scssa-logo" class="nav-image">
+            <img src="./assets/img/uok-logo.png" alt="uok-logo" class="nav-image">
+        </div>
+        <div id="menuToggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul id="menu">
+                <a href="#">
+                    <li>Home</li>
+                </a>
+                <a href="#">
+                    <li>About Us</li>
+                </a>
+                <a href="#">
+                    <li>Activities</li>
+                </a>
+                <a href="#">
+                    <li>Events</li>
+                </a>
+                <a href="#">
+                    <li>Resources</li>
+                </a>
+                <a href="#">
+                    <li>Contact</li>
+                </a>
+            </ul>
+        </div>
+    </nav>
+    <!--===== Cursor animation =====-->
+    <div class="blob" id="blob"></div>
+    <div class="blur" id="blur"></div>
+    <!--===== Home =====-->
+    <section class="home" id="home">
+        <h1 data-value="SCSSA-UOK" class="glitch big">SCSSA-UOK</h1>
+        <h3 data-value="Statistics & Computer Science Students' Association - University of Kelaniya
+    " class="glitch small">Statistics & Computer Science Students' Association - University of Kelaniya
+        </h3>
+    </section>
+
+    <!--===== About section =====-->
+    <section class="about" id="about">
+        <div class="card">
+            <div class="card-content">
+                <h3>About us</h3>
+                <h1>Creating a Better World, One Step at a Time</h1>
+                <p>The Student Association of the Department of Statistics and Computer Science at the University of Kelaniya is a vibrant
+                community of students who share a common passion for statistics and computer science. Our association is dedicated to
+                fostering a culture of academic excellence, innovation, and professional development among students in these
+                disciplines.
+                <br><br>
+                Our mission is to provide students with opportunities to learn, grow, and excel in their academic and professional
+                pursuits. We organize various academic and social events throughout the year, including guest lectures, workshops,
+                seminars, and competitions, which are designed to enhance our members' knowledge, skills, and practical experience.
+                <br><br>
+                Our association is committed to promoting diversity, equity, and inclusion in all its activities and initiatives. We
+                welcome students from diverse backgrounds and strive to create an inclusive and supportive community where everyone can
+                thrive and succeed.
+                <br><br>
+                Whether you are a new or current student, we encourage you to join our association and be part of our dynamic community.
+                We are confident that our association will help you develop your academic, personal, and professional skills, and create
+                lasting friendships and connections with like-minded individuals.</p>
             </div>
-    
-            <!-- Toggle button -->
-            <div class="nav__toggle" id="nav-toggle">
-                <i class='bx bx-grid-alt'></i>
-            </div>
-        </nav>
-    </header>
-    
-    <!--==================== MAIN ====================-->
-    <main class="main" >
-        <!--==================== HOME ====================-->
-        <section class="home">
-            <div class="home__container container">
-                <div class="home__data">
-                    <span class="home__subtitle">SCS | UOK</span>
-                    <h1 class="home__title">Statistical Consulting Service</h1>
-                    <p class="home__description">
-                       Department of Statistics and Computer Science <br> University of Kelaniya.
-                    </p>
-                    <!-- <a href="#" class="home__button">
-                        More Info
-                    </a>-->
-                </div>
-    
-                <div class="home__img">
-                            <iframe src='https://my.spline.design/planesculptcopy-20e4429753535ec876a2ef7893143cc3/' frameborder='0'
-                                width='100%' height='100%'></iframe>
-                    <div class="home__shadow"></div>
-                </div>
-            </div>
-    
-            <footer class="home__footer">
-                <span><a href="tel:(+94)112-000-000">(+94) 112-000-000</a></span>
-                <span>|</span>
-                <span><a href="info@scs.uok.com ">info@scs.uok.com (not actual mail)</a></span>
-            </footer>
-        </section>
-    </main>
-    <!--==================== about ====================-->
-    <section id="about">
-        
-        <div class="card2">
-            <span style="--i: 0"></span>
-            <span style="--i: 1"></span>
-            <span style="--i: 2"></span>
-            <span style="--i: 3"></span>
-            <div class="glass">
-                <div>
-                    <h2>About SCS UOK<br />
-                        <i>The Department of Statistics and Computer Science, Faculty of Science, University of Kelaniya provides a free statistical
-                            consulting
-                            service to university researchers and industrial organizations. We can assist clients in a diverse range of
-                            statistical
-                            issues. The statistical consulting service provides one-to-one statistical support.</i>
-                    </h2>
-                    <button class="about__button">Find out more...</button>
-                </div>       
-            </div>     
         </div>
     </section>
-
-    <!--==================== Software ====================-->
-    <h1 class="service__title">Software Expertise</h1>
-    <section class="software-section" id="Software">
-
-        <div class="card-grid">
-            <a class="card" href="#">
-                <div class="card__background" style="background-image: url(/assets/img/r.png)">
-                </div>
-                <div class="card__content">
-                    <p class="card__category"></p>
-                    <h3 class="card__heading">R</h3>
-                </div>
-            </a>
-            <a class="card" href="#">
-                <div class="card__background" style="background-image: url(/assets/img/py.png)">
-                </div>
-                <div class="card__content">
-                    <p class="card__category"></p>
-                    <h3 class="card__heading">Python</h3>
-                </div>
-            </a>
-            <a class="card" href="#">
-                <div class="card__background" style="background-image: url(/assets/img/Tableau.png)">
-                </div>
-                <div class="card__content">
-                    <p class="card__category"></p>
-                    <h3 class="card__heading">Tableau</h3>
-                </div>
-            </a>
-            <a class="card" href="#">
-                    <div class="card__background" style="background-image: url(/assets/img/rcom.png)">
+    <!--===== Recent Event =====-->
+    <section class="events" id="events">
+        <div class="event-content">
+            <h3>Events</h3>
+            <h1>Highlights from past events</h1>
+        </div>
+        <div class="event--wrapper">
+            <div class="screen">
+                <div class="screen-image-1"></div>
+                <div class="screen-content">
+                    <i class="screen-icon"></i>
+                    <div class="screen-user">
+                        <span class="name"><img src="/assets/scssa/img/microphone.png" alt="mic" class="event-icon"></span>
+                        <a class="link" href="#">Sing Along</a>
                     </div>
-                    <div class="card__content">
-                        <p class="card__category"></p>
-                        <h3 class="card__heading">R Commander</h3>
+                </div>
+            </div>
+            <div class="screen">
+                <div class="screen-image-2"></div>
+                <div class="screen-content">
+                    <i class="screen-icon"></i>
+                    <div class="screen-user">
+                        <span class="name"><img src="/assets/scssa/img/food.webp" alt="mic" class="event-icon"></span>
+                        <a class="link" href="#">Yummy Fest</a>
                     </div>
-            </a>
-        <div>
-    </section>
-
-    <!--==================== Services ====================-->
-    <h1 class="service__title">Services</h1>
-    <section class="service-section" id="Services">
-        
-        <div class="card-grid2">
-            <a class="card3" href="#">
-                <div class="card__content2">
-                    <h3 class="card__heading">Advice on study design</h3>
-                    <p class="card__category">Experimental design, Questionnaire design, Sampling design, Data Management, Data wrangling</p>
                 </div>
-            </a>
-            <a class="card3" href="#">
-                <div class="card__content2">
-                    <h3 class="card__heading">Data Analysis and Interpretation of results</h3>
-                    <p class="card__category">Data Visualization, Choice and application of statistical methods, Advanced statistical analysis and interpretation, Statistical modelling. Feedback and advice on statistical methods.</p>
+            </div>
+            <div class="screen">
+                <div class="screen-image-3"></div>
+                <div class="screen-content">
+                    <i class="screen-icon"></i>
+                    <div class="screen-user">
+                        <span class="name"><img src="/assets/scssa/img/movie.png" alt="mic" class="event-icon"></span>
+                        <a class="link" href="#">Movie Fest</a>
+                    </div>
                 </div>
-            </a>
-            <a class="card3" href="#">
-                <div class="card__content2">
-                    <h3 class="card__heading">Assistance with statistical software and programming</h3>
-                    <p class="card__category">Mainly open source software (R and Python) and R Commander graphical user interfaces (alternative to SPSS and Minitab).</p>
-                </div>
-            </a>
             </div>
+            
+        </div>
     </section>
-    <!--==================== contact ====================-->
-    <h1 class="service__title">Get in touch</h1>
-    <section class="get-in-touch">
-        
-        <form class="contact-form row">
-            <div class="form-field col x-50">
-                <input id="name" class="input-text js-input" type="text" required>
-                <label class="label" for="name">Name</label>
-            </div>
-            <div class="form-field col x-50">
-                <input id="email" class="input-text js-input" type="email" required>
-                <label class="label" for="email">E-mail</label>
-            </div>
-            <div class="form-field col x-100">
-                <input id="message" class="input-text js-input" type="text" required>
-                <label class="label" for="message">Message</label>
-            </div>
-            <div class="form-field col x-100 align-center">
-                <input class="submit-btn" type="submit" value="Submit">
-            </div>
-        </form>
-    </section>
-
     <!--==================== footer ====================-->
     <footer class="footer">
         <div class="footer__addr">
@@ -228,7 +146,7 @@
             <address>
                 Department of Statistics and Computer Science, <br>Faculty of Science, <br>University of Kelaniya.<br>
 
-            
+
             </address>
             <span><a href="tel:(+94)112-000-000">(+94) 112-000-000</a></span>
             <br>
@@ -306,14 +224,17 @@
             <p>&copy; 2023 by DSCS, FOS, UOK. All rights reserved.</p>
 
             <div class="legal__links">
-                <span>Made with <span class="heart">♥</span> by <a href="https://deeghayu.netlify.app/" class="author">Deeghayu Adhikari</a></span>
+                <span>Made with <span class="heart">♥</span> by <a href="https://deeghayu.netlify.app/"
+                        class="author">Deeghayu Adhikari</a></span>
             </div>
         </div>
     </footer>
-</main>
-    <script src="/assets/js/main.js"></script>
-    <script src="/assets/js/scrollreveal.min.js"></script>
+    <!--===== js =====-->
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/add-on.js"></script>
+
     <!--===== detect_browser =====-->
-    <script src="/assets/js/detect_browser.js"></script>
+    <script src="assets/js/detect_browser.js"></script>
 </body>
-</html>
+
+
