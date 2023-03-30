@@ -45,14 +45,6 @@
             parseInt(ua.substring(edge + 5, ua.indexOf(".", edge)), 10)
           );
         }
-        var safari = ua.indexOf("safari/");
-        if (safari > 0) {
-          return (
-            "Apple Safari " +
-            parseInt(ua.substring(safari + 5, ua.indexOf(".", safari)), 10)
-          );
-        }
-
 
         // other browser
         return "false";
