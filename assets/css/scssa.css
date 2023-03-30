@@ -17,6 +17,7 @@ body {
     background-size: cover;
     background-position: center;
 }
+
 .back p {
     position: relative;
     color: var(--text-color);
@@ -743,5 +744,8 @@ nav:hover #menuToggle span {
     .screen {
         scale: 0.8;
         margin-bottom: 0rem;
+    }
+    .gap {
+        margin-top: 5rem;
     }
 }
