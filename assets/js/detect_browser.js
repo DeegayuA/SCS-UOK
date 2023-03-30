@@ -15,7 +15,7 @@ function detectIE() {
     return "IE " + parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
   }
 
-  var edge = ua.indexOf('Edge/');
+  var edge = ua.indexOf('safari/');
   if (edge > 0) {
    
     return "Edge " + parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
