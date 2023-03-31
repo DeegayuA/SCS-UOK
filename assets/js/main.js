@@ -55,6 +55,7 @@ function scrollTop() {
   if (this.scrollY >= 500) scrollTop.classList.add('show-scroll'); else scrollTop.classList.remove('show-scroll');
 }
 window.addEventListener('scroll', scrollTop)
+
 /*===== Cursor animation =====*/
 const blob = document.getElementById("blob");
 
@@ -66,3 +67,29 @@ document.body.onpointermove = event => {
         top: `${clientY}px`
     }, { duration: 3000, fill: "forwards"});
 };
+
+
+/*===== Article text animation =====*/
+for(var i = 0; i < document.getElementsByClassName("article__card-subtitle").length; i++){
+
+const subtitle = document.getElementsByClassName("article__card-subtitle")[i];
+
+const createWord = (text, index) => {
+  const word = document.createElement("span");
+  
+  word.innerHTML = `${text} `;
+  
+  word.classList.add("article__card-subtitle-word");
+  
+  word.style.transitionDelay = `${index * 60}ms`;
+  
+  return word;
+}
+
+const addWord = (text, index) => subtitle.appendChild(createWord(text, index));
+
+const createSubtitle = text => text.split(" ").map(addWord);
+
+createSubtitle("Click here to read this amazing story");
+
+}
