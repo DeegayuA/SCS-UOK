@@ -315,7 +315,7 @@ nav:hover #menuToggle span {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    background-image: radial-gradient(var(--highlight-scssa-color) 1px,
+    background-image: radial-gradient(var(--highlight-scssa-color) .5px,
             transparent 1px);
     background-position: 50% 50%;
     background-size: 1.1rem 1.1rem;
