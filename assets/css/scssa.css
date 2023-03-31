@@ -210,8 +210,8 @@ button:hover .button-text {
 /* Scroll Down animation  */
 .scroll-down {
     position: absolute;
-    left: 50vw;
-    bottom: 10vh;
+    left: calc( 50% - 20px);
+    bottom: 8vh;
     display: block;
     text-align: center;
     z-index: 11;
