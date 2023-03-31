@@ -6,6 +6,11 @@ body {
     margin: 0rem;
     overflow-x: hidden;
 }
+.new{
+    height: 150vh;
+    
+    
+}
 video{
     max-height: 90vh;
     min-height: 20vh;
@@ -216,7 +221,7 @@ nav:hover #menuToggle span {
 #menu {
     position: absolute;
     width: 400px;
-    height: 100vh;
+    height: 140vh;
     margin: -100px 0 0 -50px;
     padding: 50px;
     padding-top: 125px;
