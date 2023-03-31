@@ -209,9 +209,9 @@ button:hover .button-text {
 }
 /* Scroll Down animation  */
 .scroll-down {
-    position: absolute;
+    position: relative;
+    margin-top: 6rem;
     left: calc( 50% - 20px);
-    bottom: 8vh;
     display: block;
     text-align: center;
     z-index: 11;
@@ -953,7 +953,7 @@ nav:hover #menuToggle span {
     pointer-events: none;
     position: absolute;
     top: 0px;
-    transition: background-position 350ms ease, transform 350ms ease;
+    transition: background-position 500ms ease, transform 350ms ease;
     width: 100%;
     z-index: 1;
     border-radius: 1rem;
