@@ -7,16 +7,6 @@ body {
     overflow-x: hidden;
 }
 
-.back{
-    position: absolute;
-    left: 30px;
-    top: 30px;
-    height: 50px;
-    aspect-ratio: 1;
-    background-image: url(/assets/img/back-white.png);
-    background-size: cover;
-    background-position: center;
-}
 
 .back p {
     position: relative;
@@ -133,7 +123,7 @@ body {
     position: relative;
     top: 50px;
     left: 50px;
-    z-index: 1;
+    z-index: 11;
     -webkit-user-select: none;
     user-select: none;
 }
@@ -653,14 +643,8 @@ nav:hover #menuToggle span {
     z-index: 3;
     margin: 1rem;
     padding-bottom: 6rem;
-    border: 1px solid rgb(var(--primary-rgb) / 50%);
+    border: 1px solid var(--text-scssa-color);
     border-radius: 0.6rem;
-}
-
-.screen>.screen-content>.screen-icon {
-    color: white;
-    font-size: 4rem;
-    text-shadow: 0px 0px 0.5rem white;
 }
 
 .screen>.screen-content>.screen-user {
@@ -671,15 +655,6 @@ nav:hover #menuToggle span {
     position: relative;
 }
 
-.screen>.screen-content>.screen-user:before,
-.screen>.screen-content>.screen-user:after {
-    content: "";
-    position: absolute;
-    top: 0px;
-    background-color: rgb(var(--primary-rgb));
-    border-radius: 1rem;
-    box-shadow: 0px 0px 8px 3px rgb(var(--primary-rgb) / 60%);
-}
 
 .screen>.screen-content>.screen-user:before {
     height: 2px;
@@ -696,7 +671,7 @@ nav:hover #menuToggle span {
 
 .screen>.screen-content>.screen-user> :is(.name, .link) {
     font-family: "Source Code Pro", monospace;
-    color: white;
+    color: var(--main-scssa-color);
     text-align: center;
     text-transform: uppercase;
 }
@@ -713,7 +688,7 @@ nav:hover #menuToggle span {
     height: 4px;
     width: 4px;
     position: absolute;
-    border: 2px solid white;
+    border: 2px solid var(--main-scssa-color);
     border-radius: 2px;
 }
 
@@ -730,7 +705,7 @@ nav:hover #menuToggle span {
 .screen>.screen-content>.screen-user>.link {
     opacity: 0.8;
     font-size: 1.5rem;
-    text-shadow: 0px 0px 0.5rem white;
+    text-shadow: 0px 0px 0.5rem var(--main-scssa-color);
     font-weight: 400;
     letter-spacing: 0.3rem;
     text-decoration: none;
