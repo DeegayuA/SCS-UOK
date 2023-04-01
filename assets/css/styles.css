@@ -132,7 +132,7 @@ img {
     border-top: 1px solid var(--first-color);
 }
 
-.footer>* {
+.footer * {
     flex: 1 100%;
 }
 
