@@ -1305,6 +1305,12 @@ nav:hover #menuToggle span {
     .ShowOnMobile {
         display: initial;
     }
+    .mobileset {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
 }
 
 @media (min-width: 576px) {
