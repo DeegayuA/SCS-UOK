@@ -1270,7 +1270,7 @@ nav:hover #menuToggle span {
                     transparent 1px);
     background-position: 0% 0%;
     background-size: 4vmin 4vmin;
-    padding: 5vmin;
+    padding: 8vmin 4vmin;
     position: relative;
     transition: background-position 350ms ease;
     width: 100%;
@@ -1293,7 +1293,7 @@ nav:hover #menuToggle span {
 }
 
 .article__card-title {
-    font-size: 6vmin;
+    font-size: 4vmin;
 }
 
 .article__card-subtitle {
