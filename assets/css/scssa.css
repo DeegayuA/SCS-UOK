@@ -60,6 +60,7 @@ button {
 button.learn-more {
     width: 12rem;
     height: auto;
+    top: -10px;
 }
 
 button.learn-more .circle {
@@ -510,7 +511,6 @@ nav:hover #menuToggle span {
 
 .card {
     margin: 2rem;
-    padding-bottom: 2rem;
     width: 60vw;
     position: relative;
     background-color: var(--bg-scssa-color);
