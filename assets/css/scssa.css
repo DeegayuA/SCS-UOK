@@ -34,7 +34,7 @@ img{
         top: 50px;
     }
     .logos{
-        right: 20px;
+        top: 2rem;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -427,7 +427,6 @@ button:hover .button-text {
 
 .logos {
     position: relative;
-    top: 2rem;
 }
 
 .nav-image {
