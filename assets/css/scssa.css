@@ -28,6 +28,13 @@ img{
     .language__toggle{
         left: 50px;
     }
+
+}
+@media only screen and (max-width: 600px) {
+    .language__toggle{
+        top: 120px;
+    }
+    
 }
 
 .fixed-con {
