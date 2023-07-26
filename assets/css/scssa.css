@@ -17,7 +17,7 @@ img{
 }
 /* Google Translate */
 .language__toggle{
-    top: 50px;
+    position: relative;
     left: 120px; 
     display: flex;
     align-items: center;
@@ -41,7 +41,13 @@ img{
         flex-direction: column-reverse;
         gap: 0.5rem;
     }
-    
+    .language__toggle{
+        position: static;
+
+    }
+    .nav{
+        padding: 2rem 1rem !important;
+    }
 } 
 
 .fixed-con {
@@ -227,7 +233,7 @@ button:hover .button-text {
 .home {
     text-align: center;
     z-index: 1;
-    height: 95vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -422,7 +428,7 @@ button:hover .button-text {
     flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
-    padding: 2rem 1rem;
+    padding: 4rem;
 }
 
 .logos {
@@ -526,7 +532,7 @@ nav:hover #menuToggle span {
     position: absolute;
     width: 400px;
     height: calc(100vh + 30px);
-    margin: -120px 0 0 -50px;
+    margin: -120px 0 0 -100px;
     padding: 50px;
     padding-top: 125px;
 
