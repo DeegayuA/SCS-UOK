@@ -19,7 +19,6 @@ img{
 .language__toggle{
     top: 50px;
     left: 120px; 
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -423,12 +422,12 @@ button:hover .button-text {
     flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
+    padding: 2rem 1rem;
 }
 
 .logos {
     position: relative;
-    top: 50px;
-    right: 50px;
+    top: 2rem;
 }
 
 .nav-image {
@@ -438,7 +437,6 @@ button:hover .button-text {
 
 #menuToggle {
     display: block;
-    position: relative;
     top: 50px;
     left: 50px;
     z-index: 11;
