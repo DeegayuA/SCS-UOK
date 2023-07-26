@@ -26,16 +26,24 @@ img{
 }
 @media only screen and (max-width: 900px) {
     .language__toggle{
-        left: 50px;
+        left: 20px;
     }
 
 }
-@media only screen and (max-width: 600px) {
+ @media only screen and (max-width: 600px) {
     .language__toggle{
-        top: 120px;
+        top: 50px;
+    }
+    .logos{
+        right: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column-reverse;
+        gap: 0.5rem;
     }
     
-}
+} 
 
 .fixed-con {
     z-index: 9724790009779558!important;
