@@ -422,7 +422,7 @@
                                     <input id="send-checkbox" type="checkbox" name="checkbox" class="checkbox" required />
                                     <label class="captcha" for="send-checkbox">I'm a human *</label>
                                 </div>
-                                <button type="submit" class="send-button">Let's go!</button>
+                                <button type="submit" class="send-button" onclick="if(!this.form.checkbox.checked){alert('Check the box to verify that you are a human');return false}">Let's go!</button>
                             </form>
                         </div>
                     </div>
@@ -521,6 +521,7 @@
     <!--===== js =====-->
     <script src="/assets/js/main.js"></script>
     <script src="/assets/js/add-on.js"></script>
+
 
     <!--===== detect_browser =====-->
     <script src="/assets/js/detect_browser.js"></script>
