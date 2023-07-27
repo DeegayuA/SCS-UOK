@@ -464,8 +464,8 @@ button:hover .button-text {
     display: block;
     width: 40px;
     height: 32px;
-    position: absolute;
-    top: -7px;
+    position: relative;
+    top: 20px;
     left: -5px;
 
     cursor: pointer;
@@ -532,9 +532,9 @@ nav:hover #menuToggle span {
     position: absolute;
     width: 400px;
     height: calc(100vh + 30px);
-    margin: -120px 0 0 -100px;
-    padding: 50px;
-    padding-top: 125px;
+    margin: -150px 0 0 -70px;
+    padding: 80px;
+    padding-top: 200px;
 
     background: var(--text-scssa-color);
     list-style-type: none;
