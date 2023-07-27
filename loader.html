@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/scssa.css">
+    <link rel="stylesheet" href="/assets/css/loader.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/light-styles.css"
+        media="(prefers-color-scheme:light), (prefers-color-scheme:no-preference)">
+    <link rel="stylesheet" href="/assets/css/dark-styles.css" media="(prefers-color-scheme:dark)">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+    </style>
+    <link rel="icon" type="image/x-icon" href="/assets/img/scssa-logo.png">
+        <!--=============== BOXICONS ===============-->
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <title>SCSSA-UOK</title>
+</head>
+
+<body onload="myFunction()">
+    <!--LOADER-->
+    <div class="loader__wrapper" id="loader">
+        <div class="loader"></div>
+    </div>
+    <!--===== SCROLL TOP =====-->
+    <a href="#" class="scrolltop" id="scroll-top">
+        <i class='bx bxs-chevrons-up scrolltop__icon'></i>
+    </a>
+    <!--===== Nav =====-->
+    <nav role="navigation" class="nav">
+        <div class="logos">
+           <a href="/scssa.html"> <img src="/assets/img/scssa-logo.png" alt="scssa-logo" class="nav-image"></a>
+           <a href="/index.html"> <img src="/assets/img/uok-logo.png" alt="uok-logo" class="nav-image"></a>
+        </div>
+        <div id="menuToggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul id="menu">
+                <a href="/.html">
+                    <li>Home</li>
+                </a>
+                <a href="">
+                    <li>About Us</li>
+                </a>
+                <a href="">
+                    <li>Blog</li>
+                </a>
+                <a href="">
+                    <li>Events</li>
+                </a>
+                <a href="">
+                    <li>Membership</li>
+                </a>
+                <a href="/index.html">
+                    <li>Contact</li>
+                </a>
+            </ul>
+        </div>
+    </nav>
+    <!--===== Cursor animation =====-->
+    <div class="blob" id="blob"></div>
+    <div class="blur" id="blur"></div>
+    <div style="">
+        <video autoplay muted loop id="myVideo" style="
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100vw !important;
+        min-height: 100vh !important;
+        object-fit: cover;
+        object-position: center;
+        z-index: -1;
+        opacity: 0.5;
+      ">
+        <source src="/assets/img/video(720p).mp4" type="video/mp4" >
+      </video>
+    </div>
+    
+
+    <!--===== Home =====-->
+    <section class="home" id="home" style="height: 60vh;">
+
+
+        <h1 data-value="<SCSSA UOK>" class="glitch big">Coming Soon</h1>
+        <div class="launch-time glitch medium">
+            <div class="time-format">
+                <span id="days">00</span>
+                <span>Days</span>
+            </div>
+            <div class="time-format">
+                <span id="hours">00</span>
+                <span>Hours</span>
+            </div>
+            <div class="time-format">
+                <span id="minutes">00</span>
+                <span>Minutes</span>
+            </div>
+            <div class="time-format">
+                <span id="seconds">00</span>
+                <span>Seconds</span>
+            </div>
+        </div>
+        <br><br>
+        <div class="button__container">
+            <a href="/scssa.html">
+                <button class="learn-more">
+                    <span class="circle" aria-hidden="true">
+                        <span class="icon arrow"></span>
+                    </span>
+                    <h3 class="button-text">Launch</h3>
+                </button>
+            </a>
+        </div>
+    </section>
+
+    <!--===== js =====-->
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/add-on.js"></script>
+    <script src="/assets/js/timer.js"></script>
+    <script>
+        function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        autoDisplay: false,
+        includedLanguages:'en,si,ta',
+        layout: google.translate.TranslateElement.InlineLayout.VERTICAL
+        }, 'google_translate_element');
+        }
+    </script>
+    <script src='//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit'></script>
+
+    <!--===== detect_browser =====-->
+    <script src="/assets/js/detect_browser.js"></script>
+</body>
+
+
