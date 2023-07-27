@@ -22,7 +22,7 @@ img{
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
 }
 @media only screen and (max-width: 900px) {
     .language__toggle{
@@ -234,7 +234,7 @@ button:hover .button-text {
 .home {
     text-align: center;
     z-index: 1;
-    height: 80vh;
+    height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
