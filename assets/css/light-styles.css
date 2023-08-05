@@ -1,0 +1,24 @@
+:root {
+    --header-color: #000000;
+    --text-color: #202020;
+    --bg-color: #eeeeee;
+    --bg-color2: rgba(255, 255, 255, 0.5);
+    --bg-color3: rgba(255, 255, 255, 0.2);
+    --first-color: #6c9aff;
+    --bg-scssa-color: #ffffff;
+    --main-scssa-color: #000000;
+    --text-scssa-color: #272727;
+    --highlight-scssa-color: #00b3ff;
+    --bg1-scssa-color: rgb(0, 255, 72);
+    --bg2-scssa-color: rgb(47, 0, 255);
+}
+.back {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    height: 50px;
+    aspect-ratio: 1;
+    background-image: url(/assets/img/back-black.png);
+    background-size: cover;
+    background-position: center;
+}
