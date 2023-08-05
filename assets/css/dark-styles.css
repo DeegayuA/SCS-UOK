@@ -1,0 +1,24 @@
+:root {
+    --header-color: #ffffff;
+    --text-color: #eaeaea;
+    --bg-color: #272727;
+    --bg-color2: rgba(0, 0, 0, 0.5);
+    --bg-color3: rgba(0, 0, 0, 0.2);
+    --first-color: #00277a;
+    --bg-scssa-color: rgb(10, 10, 10);
+    --main-scssa-color: #ffffff;
+    --text-scssa-color: #d6d6d6;
+    --highlight-scssa-color: #0082ba;
+    --bg1-scssa-color: rgb(0, 255, 72);
+    --bg2-scssa-color: rgb(138, 112, 255);
+}
+.back {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    height: 50px;
+    aspect-ratio: 1;
+    background-image: url(/assets/img/back-white.png);
+    background-size: cover;
+    background-position: center;
+}
